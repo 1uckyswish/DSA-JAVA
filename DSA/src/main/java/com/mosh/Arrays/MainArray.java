@@ -11,7 +11,8 @@ public class MainArray {
     numbers.insert(20);
     numbers.insert(30);
     numbers.insert(40);
-    numbers.removeAt(2);
-        numbers.print();
+    numbers.print();
+
+      numbers.reverse();
     }
 }

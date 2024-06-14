@@ -1,11 +1,32 @@
 package com.mosh.Arrays;
 
+import java.util.Arrays;
+
 public class Array {
     private int[] items;
     private int count;
 
     public Array(int count) {
         this.items = new int[count];
+    }
+
+    public void reverse(){
+        int[] newArray = new int[items.length -1];
+        for(int i = 1; i < items.length - 1; i++){
+            newArray[i] = items[i];
+        }
+        System.out.println(Arrays.toString(newArray));
+    }
+
+    public int max(){ // O(n) run time due to worst case biggest number is at the end
+        int start = items[0];
+
+        for(int i : items){
+            if(i > start){
+                start = i;
+            }
+        }
+        return start;
     }
 
     public void print(){
@@ -50,4 +71,5 @@ public class Array {
         }
         return -1;
     }
+
 }
